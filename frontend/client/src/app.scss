@@ -1,0 +1,25 @@
+@import "./cyberpunk.scss";
+
+page {
+  background: #000;
+  height: 100vh;
+  text-size-adjust: 100%;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+}
+
+.index {
+  counter-reset: card;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #cdcdcd;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "Oxanium", Ubuntu, Roboto, "Open Sans", "Microsoft YaHei",
+    sans-serif;
+}

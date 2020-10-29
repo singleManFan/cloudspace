@@ -16,3 +16,17 @@ declare const process: {
     [key: string]: any;
   }
 }
+
+interface UseModel<T> {
+  (depsFn?: (model: T) => unknown[]): T;
+  data?: T;
+}
+
+type ModelHook<T = any, P = any> = (hookArg: P) => T;
+
+type Deps<T> = (model: T) => unknown[];
+interface UseModel<T> {
+  (depsFn?: Deps<T>): T;
+  data?: T;
+}
+

@@ -1,9 +1,9 @@
 {
 	"miniprogramRoot": "client/dist/",
 	"cloudfunctionRoot": "cloud/functions/",
-	"projectname": "frontend",
+	"projectname": "cloudspace",
 	"description": "cloudspace",
-	"appid": "wx2b8b27fd9f28ac50",
+	"appid": "wxf9e508abfcc5daa9",
 	"setting": {
 		"urlCheck": true,
 		"es6": false,
@@ -13,5 +13,6 @@
 	"compileType": "miniprogram",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"libVersion": "2.13.2",
 	"condition": {}
 }
