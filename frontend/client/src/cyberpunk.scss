@@ -7,14 +7,22 @@ $m-height: 3.25rem;
   justify-content: center !important;
 }
 
+.order-2 {
+  order: 2 !important;
+}
+
+// 淡入动画
 .render-page {
-  transition: opacity 0.3s ease-out 0s, transform 0.3s ease-out 0s;
-  opacity: 1;
+  opacity: 1 !important;
   // 硬件加速
   transform: translateY(0px);
 }
 
-// 内容展示
+.transition-opacity {
+  transition: opacity 0.3s ease-out 0s, transform 0.3s ease-out 0s;
+}
+
+// tabBar
 .tab-bar {
   background: $primary-color;
   min-height: $m-height;
@@ -22,7 +30,7 @@ $m-height: 3.25rem;
   z-index: 30;
   padding-top: 10px;
   padding-bottom: 30px;
-  opacity: 0;
+  opacity: 1;
 
   .tab-bar-menu {
     display: flex;
@@ -62,7 +70,7 @@ $m-height: 3.25rem;
   }
 }
 
-// 装饰
+// 尾部装饰
 .tab-bar::after {
   content: "";
   position: absolute;
@@ -71,4 +79,91 @@ $m-height: 3.25rem;
   bottom: -2px;
   background: url(./assets/img/razor-top-black.svg) repeat-x top;
   height: 40px;
+}
+
+// section
+.section {
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+
+  .container {
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+    width: auto;
+
+    .columns:last-child {
+      margin-bottom: -0.75rem;
+    }
+
+    .columns {
+      margin-left: -0.75rem;
+      margin-right: -0.75rem;
+      margin-top: -0.75rem;
+      display: flex;
+      flex-direction: column;
+
+      .column {
+        display: block;
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding: 0.75rem;
+
+        .card {
+          overflow: visible;
+          border-radius: 0;
+          background-color: transparent;
+          box-shadow: none, 0 0 1px rgba(0, 0, 0, 0.1);
+          color: #cdcdcd;
+          max-width: 100%;
+          position: relative;
+        }
+
+        .card::after {
+          content: "🐈" counter(card);
+          position: absolute;
+          color: #02d7f2;
+          right: 2rem;
+          bottom: -0.6em;
+          font-size: 0.75rem;
+          padding: 0 0.25em;
+          background: #000;
+        }
+
+        .card::before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: -1.2px;
+          left: -1.2px;
+          right: -1.2px;
+          bottom: -1.2px;
+          background-color: #02d7f2;
+          clip-path: polygon(
+            0 0,
+            calc(100% - 16px) 0,
+            100% 16px,
+            100% 100%,
+            16px 100%,
+            0 calc(100% - 16px),
+            0 0
+          );
+          -webkit-clip-path: polygon(
+            0 0,
+            calc(100% - 16px) 0,
+            100% 16px,
+            100% 100%,
+            16px 100%,
+            0 calc(100% - 16px),
+            0 0
+          );
+        }
+      }
+    }
+  }
 }

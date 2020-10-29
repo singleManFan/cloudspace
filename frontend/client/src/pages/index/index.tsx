@@ -3,12 +3,13 @@ import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import './index.scss'
 import CustomTabBar from '../../components/custom-tab-bar'
-export default function Index() {
+import Section from '../../components/section'
 
+export default function Index() {
   return (
     <View className='index'>
       <CustomTabBar tabKey={0} />
-        主页
+        <Section></Section>
       </View>
     )
 }

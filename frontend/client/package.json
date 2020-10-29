@@ -37,10 +37,10 @@
     "@tarojs/react": "3.0.15",
     "@tarojs/runtime": "3.0.15",
     "@tarojs/taro": "3.0.15",
+    "hox": "^1.1.1",
     "lodash": "4.17.15",
     "react": "^16.10.0",
-    "react-dom": "^16.10.0",
-    "recoil": "0.0.13"
+    "react-dom": "^16.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",

@@ -1,8 +1,6 @@
-import React, { useState} from 'react'
+import React from 'react'
 import Taro from '@tarojs/taro'
 import { View, Image, Text } from '@tarojs/components'
-
-import useRenderComModel from '../../models/useRenderCom'
 
 // images
 import logoPng from '../../assets/img/duckling.png'
@@ -62,7 +60,7 @@ interface Props {
 }
 
 export default function TabBar(props: Props) {
-  const { isRenderCom} = useRenderComModel()
+
   const { tabKey } = props
 
   const switchTabBar = (url) => {
@@ -72,7 +70,7 @@ export default function TabBar(props: Props) {
   }
 
     return (
-      <View className='tab-bar'>
+      <View className={['tab-bar', 'transition-opacity'].join(' ')}>
         <View className='tab-bar-brand justify-content-center'>
           <Image
             className="logo"
