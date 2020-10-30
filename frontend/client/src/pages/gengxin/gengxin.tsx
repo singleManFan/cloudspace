@@ -3,13 +3,9 @@ import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import "./index.scss";
 
-import CustomTabBar from "../../components/custom-tab-bar";
+import Layout from "../../components/layout";
 
 export default function Index() {
-  return (
-    <View className="index">
-      <CustomTabBar tabKey={4} />
-      更新 - 这里什么都没有~
-    </View>
-  );
+  return <Layout tabKey={4}>更新 这里什么都没有~</Layout>;
 }
+

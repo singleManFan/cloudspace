@@ -121,16 +121,21 @@ page {
   z-index: 2;
 }
 
-.back-to-top::after {
+.glath-wrap {
+  position: relative;
+}
+
+.glith-anims {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: $primary-color;
-  filter: drop-shadow(-2px 3px #67e3f3) drop-shadow(-1px -3px #02d8f3)
-    drop-shadow(2px 1px #02d8f3);
+  border-radius: 50%;
+  overflow: hidden;
+  filter: drop-shadow(-2px 3px #000) drop-shadow(-1px -3px #000)
+    drop-shadow(2px 1px #000);
   display: block;
   animation-duration: 2s;
   animation-timing-function: linear;

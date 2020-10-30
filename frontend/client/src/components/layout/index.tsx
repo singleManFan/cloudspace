@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Taro from "@tarojs/taro";
 import { View, ScrollView } from "@tarojs/components";
 import CustomTabBar from "../../components/custom-tab-bar";
 import Footer from "../../components/footer";
 import BackToTop from "../../components/back-to-top";
+import Section from "../../components/section";
 import _ from "lodash";
 
 export default function Index(props) {
@@ -42,9 +43,11 @@ export default function Index(props) {
         scrollY
       >
         <View className="index">
-          <CustomTabBar tabKey={0} />
+          <CustomTabBar tabKey={props.tabKey} />
+          <Section>
           {props.children}
-          <Footer />
+          </Section>
+        <Footer />
         </View>
       </ScrollView>
       <BackToTop backToTop={backToTop} isShow={showBackToTop} />
