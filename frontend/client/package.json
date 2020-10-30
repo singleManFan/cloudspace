@@ -38,7 +38,7 @@
     "@tarojs/runtime": "3.0.15",
     "@tarojs/taro": "3.0.15",
     "hox": "^1.1.1",
-    "lodash": "4.17.15",
+    "lodash": "^4.17.15",
     "react": "^16.10.0",
     "react-dom": "^16.10.0"
   },
