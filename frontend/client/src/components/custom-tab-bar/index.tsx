@@ -3,7 +3,7 @@ import Taro from "@tarojs/taro";
 import { View, Image, Text } from "@tarojs/components";
 
 // images
-import logoPng from "../../assets/img/duckling.png";
+import logoSvg from "../../assets/img/duckling.svg";
 import homeSvg from "../../assets/img/home.svg";
 import coffeeSvg from "../../assets/img/coffee.svg";
 import xiaoceSvg from "../../assets/img/xiaoce.svg";
@@ -71,7 +71,7 @@ export default function TabBar(props: Props) {
   return (
     <View className={["tab-bar", "transition-opacity"].join(" ")}>
       <View className="tab-bar-brand justify-content-center">
-        <Image className="logo" src={logoPng} />
+        <Image className="logo" src={logoSvg} />
       </View>
       <View className="tab-bar-menu justify-content-center">
         {tabBar.map(item => (

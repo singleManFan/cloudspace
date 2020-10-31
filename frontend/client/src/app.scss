@@ -37,7 +37,7 @@ page {
 }
 
 .button.is-primary {
-  background-color: #fcee09;
+  background-color: $primary-color;
   border-color: transparent;
   color: #000;
 }
@@ -46,7 +46,7 @@ page {
   background-color: #000;
   border-color: #dbdbdb;
   border-width: 1px;
-  color: #fcee09;
+  color: $primary-color;
   cursor: pointer;
   justify-content: center;
   padding-bottom: calc(0.375em - 1px);
@@ -66,7 +66,7 @@ page {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #fcee09;
+  background-color: $primary-color;
   color: #121617;
   clip-path: polygon(
     8px 0,
@@ -121,10 +121,7 @@ page {
   z-index: 2;
 }
 
-.glath-wrap {
-  position: relative;
-}
-
+// 头像裁剪
 .glith-anims {
   content: "";
   position: absolute;
@@ -144,7 +141,40 @@ page {
   animation-direction: alternate;
 }
 
-.btn-preorder__text::after {
+// 文字裁剪
+.btn-preorder__gjzlk::after {
+  content: "创建资料库";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-shadow: 2px 1px #67e3f3, -2px -2px $primary-color;
+  z-index: 2;
+  display: block;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: glitch-anim;
+  animation-direction: alternate;
+}
+
+.btn-preorder__cjzh::after {
+  content: "创建账户";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-shadow: 2px 1px #67e3f3, -2px -2px $primary-color;
+  z-index: 2;
+  display: block;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: glitch-anim;
+  animation-direction: alternate;
+}
+
+.btn-preorder__gzw::after {
   content: "关注我";
   position: absolute;
   top: 0;
@@ -160,6 +190,7 @@ page {
   animation-direction: alternate;
 }
 
+// 按钮背景
 .btn-preorder--glitch {
   position: absolute;
   top: 0;
@@ -177,6 +208,7 @@ page {
   animation-direction: alternate;
 }
 
+// 裁剪动画
 @keyframes glitch-anim {
   0% {
     opacity: 1;

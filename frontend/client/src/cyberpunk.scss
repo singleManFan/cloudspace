@@ -1,6 +1,7 @@
 // 常用值
 $primary-color: #fcee09;
 $m-height: 3.25rem;
+$border-color: #02d7f2;
 
 // 工具类
 .justify-content-center {
@@ -231,7 +232,8 @@ $m-height: 3.25rem;
 }
 
 .card-content {
-  .notification.is-danger {
+  .notification.is-danger,
+  .button.is-danger::before {
     background-color: #ff003c;
     color: #121617;
   }
@@ -307,7 +309,7 @@ $m-height: 3.25rem;
 
 .footer {
   position: relative;
-  background-color: #fcee09;
+  background-color: $primary-color;
   padding: 3rem 1.5rem 6rem;
   color: #000;
   text-align: center;
@@ -357,4 +359,71 @@ $m-height: 3.25rem;
   height: 100%;
   z-index: 2;
   opacity: 0;
+}
+
+// 个性签名
+
+.motto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .motto-input {
+    width: 118px;
+    border: 1px solid $border-color;
+  }
+
+  .edit-msg,
+  .show-msg {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.edit-motto,
+.done-motto {
+  width: 20px;
+  height: 20px;
+  padding-left: 5px;
+  flex-shrink: 0;
+}
+
+.done-motto {
+  width: 25px;
+  height: 25px;
+}
+
+// setting
+.setting.title {
+  color: $primary-color;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+.notification {
+  .filed-area {
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .label {
+    display: flex;
+    margin-right: 10px;
+    flex-grow: 1;
+  }
+
+  .filed-input {
+    background: #fff;
+    padding-top: calc(0.375em - 2rpx);
+  }
+}
+
+// 工具
+.tools {
+  border-radius: 0;
+  padding: 0 2.5rem 2.25rem 2.5rem;
+  position: relative;
 }
