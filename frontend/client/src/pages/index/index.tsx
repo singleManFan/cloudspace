@@ -29,7 +29,7 @@ export default function Index() {
   const clickCacheHandle = () => {
     Taro.showModal({
       title: "这是一个危险操作！！！",
-      content: "缓存清除后数据将彻底丢失，你确定这样做吗？",
+      content: "缓存清除后数据将彻底丢失，你确定要这样做吗？",
       confirmText: "确认清除",
       cancelText: "再考虑下",
       success: function(res) {
@@ -69,6 +69,10 @@ export default function Index() {
   };
 
   const formSubmit = e => {
+    if(!e.detail.value.homePage && !e.detail.value.douyin) {
+      return;
+    }
+
     if (e.detail.value.homePage) {
       setHomePage(e.detail.value.homePage);
       try {
@@ -132,23 +136,14 @@ export default function Index() {
       <View className="columns">
         <View className="column">
           <Card>
-            <View className="setting title">通告卡</View>
-            <View>
-              Cloudpress
-              是一款免费的随笔记事工具，支持离线使用，方便随时随地、快速记录，回顾闲散时光的点点滴滴🥰。
-            </View>
-          </Card>
-        </View>
-        <View className="column">
-          <Card>
             <View className="setting title">个人资料卡</View>
             <View style={{ marginBottom: "0.5rem" }}>
               将在下方为你的个人主页创建关注按钮
             </View>
-            <View className="notification is-danger">
+            <View className="form-area">
               <Form onSubmit={e => formSubmit(e)}>
                 <View className="filed-area">
-                  <Label className="label">个人主页:</Label>
+                  <Label className="label button">个人主页:</Label>
                   <Input
                     maxlength={60}
                     className="filed-input"
@@ -158,7 +153,7 @@ export default function Index() {
                   />
                 </View>
                 <View className="filed-area">
-                  <Label className="label">抖音号:</Label>
+                  <Label className="label button">抖音号:</Label>
                   <Input
                     maxlength={60}
                     className="filed-input"
