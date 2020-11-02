@@ -65,11 +65,11 @@ export default function Index() {
   };
 
   const inputMottoHandle = e => {
-    setMotto(e.detail.value);
+    setMotto(e.detail.value || mottoPlaceHodler);
   };
 
   const formSubmit = e => {
-    if(!e.detail.value.homePage && !e.detail.value.douyin) {
+    if (!e.detail.value.homePage && !e.detail.value.douyin) {
       return;
     }
 

@@ -272,6 +272,7 @@ $border-color: #02d7f2;
     margin-bottom: 1.5rem;
     align-items: center;
     justify-content: space-between;
+    overflow-x: auto;
 
     .heading {
       display: block;
@@ -283,7 +284,6 @@ $border-color: #02d7f2;
 
     .title {
       color: $primary-color;
-      font-size: 2rem;
       font-weight: 400;
       line-height: 1.125;
     }
@@ -296,6 +296,7 @@ $border-color: #02d7f2;
     flex-grow: 1;
     flex-shrink: 0;
     justify-content: center;
+    padding: 0 5px;
   }
 
   .avatar {
@@ -407,13 +408,17 @@ $border-color: #02d7f2;
     text-align: center;
     margin-bottom: 1rem;
     display: flex;
-    align-items: center;
+    align-items: stretch;
   }
 
   .label {
     display: flex;
     flex-grow: 0;
     flex-basis: 20%;
+    border-color: #dbdbdb;
+    border-style: solid;
+    border-width: 1px;
+    border-right: 0;
   }
 
   .filed-input {
@@ -422,6 +427,8 @@ $border-color: #02d7f2;
     flex-shrink: 1;
     background-color: #000;
     border-color: #dbdbdb;
+    border-style: solid;
+    border-width: 1px;
     border-radius: 0;
     color: #cdcdcd;
     border-bottom-right-radius: 0;
@@ -429,6 +436,7 @@ $border-color: #02d7f2;
     padding-left: 2.25em;
     box-shadow: inset 0 0.0625em 0.125em rgba(0, 0, 0, 0.05);
     text-align: left;
+    height: auto;
   }
 }
 
@@ -489,4 +497,37 @@ $border-color: #02d7f2;
 
 .dialog-padding-bottom {
   padding-bottom: 148px;
+}
+
+.jianji-edit {
+  min-height: 150px;
+}
+
+.section .container .columns .jianjika .card::after {
+  content: "✏️记录";
+  position: absolute;
+  color: #02d7f2;
+  right: 2rem;
+  bottom: -0.6em;
+  font-size: 0.75rem;
+  padding: 0 0.25em;
+  background: #000;
+  z-index: 2;
+}
+
+.tools-bar {
+  display: flex;
+  justify-content: flex-end;
+
+  .tools-bar-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 2px;
+  }
+
+  .tools-bar-item {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+  }
 }
