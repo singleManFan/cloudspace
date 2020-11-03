@@ -86,7 +86,9 @@ export default function Index() {
         <View className="column jianjika">
           <Card>
             <View className="level">
-              <View className="title">简记卡</View>
+              <View className="title" style="font-size: 1em;">
+                简记卡
+              </View>
             </View>
             <View className="level">
               <Textarea

@@ -147,7 +147,7 @@ export default function Index() {
                   <Input
                     maxlength={60}
                     className="filed-input"
-                    placeholder="个人主页地址"
+                    placeholder="个人主页地址/GitHub"
                     name="homePage"
                     cursor={0}
                   />

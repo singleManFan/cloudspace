@@ -5,6 +5,7 @@ export default {
     'pages/xiaoce/xiaoce',
     'pages/liuyan/liuyan',
     'pages/gengxin/gengxin',
+    'pages/webview/webview'
   ],
   tabBar: {
     custom: true,
